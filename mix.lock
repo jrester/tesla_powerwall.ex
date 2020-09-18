@@ -1,0 +1,9 @@
+%{
+  "castore": {:hex, :castore, "0.1.7", "1ca19eee705cde48c9e809e37fdd0730510752cc397745e550f6065a56a701e9", [:mix], [], "hexpm"},
+  "finch": {:hex, :finch, "0.3.1", "55d3d38eb61cd8356b6e1c696d3c526ed5b2c4e1f8643096e66a100f88001c79", [:mix], [{:castore, "~> 0.1.5", [hex: :castore, repo: "hexpm", optional: false]}, {:mint, "~> 1.0", [hex: :mint, repo: "hexpm", optional: false]}, {:nimble_options, "~> 0.2.0", [hex: :nimble_options, repo: "hexpm", optional: false]}, {:nimble_pool, "~> 0.1.0", [hex: :nimble_pool, repo: "hexpm", optional: false]}, {:telemetry, "~> 0.4.0", [hex: :telemetry, repo: "hexpm", optional: false]}], "hexpm"},
+  "jason": {:hex, :jason, "1.2.2", "ba43e3f2709fd1aa1dce90aaabfd039d000469c05c56f0b8e31978e03fa39052", [:mix], [{:decimal, "~> 1.0 or ~> 2.0", [hex: :decimal, repo: "hexpm", optional: true]}], "hexpm"},
+  "mint": {:hex, :mint, "1.1.0", "1fd0189edd9e3ffdbd7fcd8bc3835902b987a63ec6c4fd1aa8c2a56e2165f252", [:mix], [{:castore, "~> 0.1.0", [hex: :castore, repo: "hexpm", optional: true]}], "hexpm"},
+  "nimble_options": {:hex, :nimble_options, "0.2.1", "7eac99688c2544d4cc3ace36ee8f2bf4d738c14d031bd1e1193aab096309d488", [:mix], [], "hexpm"},
+  "nimble_pool": {:hex, :nimble_pool, "0.1.0", "ffa9d5be27eee2b00b0c634eb649aa27f97b39186fec3c493716c2a33e784ec6", [:mix], [], "hexpm"},
+  "telemetry": {:hex, :telemetry, "0.4.2", "2808c992455e08d6177322f14d3bdb6b625fbcfd233a73505870d8738a2f4599", [:rebar3], [], "hexpm"},
+}

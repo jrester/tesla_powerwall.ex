@@ -1,6 +1,9 @@
 # TeslaPowerwall
 
-elixir API for the Tesla Powerwall
+Elixir API for the Tesla Powerwall.
+
+> Note: This is not an official API provided by Tesla and therefore might be incomplete and fail at any time.
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
@@ -43,13 +46,13 @@ Most powerwalls serve a self signed certificate. As such a normal request will f
 To circumvent this the finch client must be instructed to not verify the certificate.
 This can be achieved by passing `[transport_opts: [verify: :verify_none]]` to the `conn_opts` when configuring the Finch pool:
 
-```
-  Finch.start_link(
-    name: TeslaPowerwallFinch,
-    pools: %{
-      "192.0.2.100" => [size: 5, conn_opts: [transport_opts: [verify: :verify_none]]]
-    }
-  )
+```elixir
+Finch.start_link(
+  name: TeslaPowerwallFinch,
+  pools: %{
+    "192.0.2.100" => [size: 5, conn_opts: [transport_opts: [verify: :verify_none]]]
+  }
+)
 ```
 
 When using a different name than `TeslaPowerwallFinch` it must be passed to the `Powerwall` struct either when calling `TeslaPowerwall.new\2` or by manually setting `finch_name` of your powerwall struct.

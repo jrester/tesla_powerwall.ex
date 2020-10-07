@@ -40,10 +40,10 @@ defmodule TeslaPowerwall.Meter do
     end
   end
 
-  @spec get_power(any) :: boolean()
+  @spec get_power(any, number) :: boolean()
   def get_power(meter, precision \\ 3) do
     case get_instant_power(meter) do
-      {:ok, instant_power} -> {:ok, convert_to_kwh(instant_power)}
+      {:ok, instant_power} -> {:ok, convert_to_kwh(instant_power, precision)}
       {:error, reason} -> {:error, reason}
     end
   end

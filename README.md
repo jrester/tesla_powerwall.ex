@@ -6,8 +6,8 @@ Elixir API for the Tesla Powerwall.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `tesla_powerwall` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `tesla_powerwall` to your list of
+dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -17,10 +17,8 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/tesla_powerwall](https://hexdocs.pm/tesla_powerwall).
-
+Additional docs can be found at
+[https://hexdocs.pm/tesla_powerwall](https://hexdocs.pm/tesla_powerwall).
 
 ### API
 
@@ -42,9 +40,12 @@ TeslaPowerwall.get_meters(powerwall)
 
 ### Finch
 
-Most powerwalls serve a self signed certificate. As such a normal request will fail because of the 'invalid' certificate.
-To circumvent this the finch client must be instructed to not verify the certificate.
-This can be achieved by passing `[transport_opts: [verify: :verify_none]]` to the `conn_opts` when configuring the Finch pool:
+Most powerwalls serve a self signed certificate. As such a normal request will
+fail because of the 'invalid' certificate.
+
+To circumvent this the finch client must be instructed to not verify the
+certificate.  This can be achieved by passing `[transport_opts: [verify: :verify_none]]`
+to the `conn_opts` when configuring the Finch pool:
 
 ```elixir
 Finch.start_link(
@@ -55,4 +56,6 @@ Finch.start_link(
 )
 ```
 
-When using a different name than `TeslaPowerwallFinch` it must be passed to the `Powerwall` struct either when calling `TeslaPowerwall.new\2` or by manually setting `finch_name` of your powerwall struct.
+When using a different name than `TeslaPowerwallFinch` it must be passed to the
+`Powerwall` struct either when calling `TeslaPowerwall.new\2` or by manually
+setting `finch_name` of your powerwall struct.

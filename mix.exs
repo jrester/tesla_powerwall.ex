@@ -12,7 +12,8 @@ defmodule TeslaPowerwall.MixProject do
       description: description(),
       package: package(),
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      docs: docs()
     ]
   end
 
@@ -26,7 +27,7 @@ defmodule TeslaPowerwall.MixProject do
     [
       {:finch, "~> 0.3"},
       {:jason, "~> 1.0"},
-      {:ex_doc, "~> 0.22", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.22", only: :dev, runtime: false}
     ]
   end
 
@@ -38,6 +39,17 @@ defmodule TeslaPowerwall.MixProject do
     [
       licenses: ["MIT"],
       links: %{"Github" => @repo_url}
+    ]
+  end
+
+  defp docs do
+    [
+      name: "TeslaPowerwall",
+      main: "readme",
+      source_url: @repo_url,
+      extras: [
+        "README.md"
+      ]
     ]
   end
 end
